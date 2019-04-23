@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!-- YouBot IMU -->
+<robot name="youbot_base_only" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Constants for robot dimensions -->
+  <xacro:property name="height" value="0.046" /> <!-- Link X -->
+  <xacro:property name="imu_link" value="0.05" /> <!-- Size of square 'IMU' box -->
+
+  <!-- Import all Gazebo-customization elements, including Gazebo colors -->
+  <xacro:include filename="$(find youbot_description)/urdf/sensors/imu.gazebo" />
+  <!-- Import Rviz colors -->
+  <xacro:include filename="$(find youbot_description)/urdf/sensors/materials.xacro" />
+
+  <!-- IMU joint -->
+  <joint name="imu_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin xyz="${imu_link} 0 ${height}" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+  </joint>
+
+  <!-- IMU -->
+  <link name="imu_link">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+	<box size="${imu_link} ${imu_link} ${imu_link}"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+	<box size="${imu_link} ${imu_link} ${imu_link}"/>
+      </geometry>
+      <material name="green"/>
+    </visual>
+
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+  </link> 
+
+</robot>
