@@ -66,6 +66,15 @@
       <parent link="${name}_footprint"/>
     </joint>
 
+    
+    <!-- Fix inertia warning 
+    <link name="dummy"></link>
+    <joint name="dummy_joint" type="fixed">
+      <parent link="dummy"/>
+      <child link="base_footprint"/>
+    </joint>
+    Fix warning -->
+
     <link name="${name}_link">
       <inertial>
         <mass value="${base_mass}"/>
