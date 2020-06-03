@@ -49,7 +49,7 @@
 			<child link="${name}_finger_link_l"/>
 			<axis xyz="0 -1 0" />
 			
-			<dynamics damping="1.0" friction="1.0" />
+			<dynamics damping="1.0" friction="0.5" />
 			<limit effort="1" velocity="0.1" lower="0" upper="${finger_joint}"/> 
                         <safety_controller k_position="20" k_velocity="25" soft_lower_limit="${threshold}" soft_upper_limit="${finger_joint_soft}" />
 		</joint>
@@ -83,7 +83,7 @@
 			<parent link="${name}_palm_link"/>
 			<child link="${name}_finger_link_r"/>
 			<axis xyz="0 -1 0" />
-			<dynamics damping="1.0" friction="1.0" />
+			<dynamics damping="1.0" friction="0.5" />
 			<limit effort="1" velocity="0.1" lower="0" upper="${finger_joint}"/> 
                         <safety_controller k_position="20" k_velocity="25" soft_lower_limit="${threshold}" soft_upper_limit="${finger_joint_soft}" />
 		</joint>
