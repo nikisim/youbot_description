@@ -29,7 +29,7 @@
 
   <!-- sensors -->
   <xacro:include filename="$(find youbot_description)/urdf/sensors/hokuyo_urg04_laser.urdf.xacro"/>
-  <xacro:include filename="$(find youbot_description)/urdf/sensors/asus_xtion_camera.urdf.xacro"/>
+  <xacro:include filename="$(find youbot_description)/urdf/sensors/intel_d435.urdf.xacro"/>
 
      
   <!-- Now we can start using the macros xacro:included above to define the actual youbot -->
@@ -63,9 +63,9 @@
   </xacro:hokuyo_urg04_laser>
 
   <!-- 3D camera on gripper -->
-  <xacro:asus_xtion_camera name="depth_cam" parent="gripper_palm_link" tilt="0.0">
+  <xacro:intel_d435 name="depth_cam" parent="gripper_palm_link" tilt="0.0">
     <origin xyz="-0.02 0 -0.035" rpy="0 -1.5 0" />
-  </xacro:asus_xtion_camera>
+  </xacro:intel_d435>
 
   
 </robot>
