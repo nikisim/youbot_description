@@ -41,11 +41,6 @@
 
   <xacro:macro name="youbot_base" params="name">
     <link name="${name}_footprint">
-      <inertial>
-        <mass value="0.1"/>
-        <origin xyz="0 0 ${-base_size_z / 2.0}" rpy="0 0 0"/>
-        <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
-      </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
@@ -65,15 +60,6 @@
       <child link="${name}_link"/>
       <parent link="${name}_footprint"/>
     </joint>
-
-    
-    <!-- Fix inertia warning 
-    <link name="dummy"></link>
-    <joint name="dummy_joint" type="fixed">
-      <parent link="dummy"/>
-      <child link="base_footprint"/>
-    </joint>
-    Fix warning -->
 
     <link name="${name}_link">
       <inertial>
