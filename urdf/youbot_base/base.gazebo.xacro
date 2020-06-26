@@ -13,21 +13,8 @@
     <gazebo reference="wheel_link_fl">
       <kp>1000000</kp>
       <kd>100</kd>
-      <mu1>100000.0</mu1>
-      <mu2>100000.0</mu2>
       <maxContacts>1</maxContacts>
       <minDepth>0.003</minDepth>
-      <collision name="wheel_link_fl_collision">
-        <surface>
-          <friction>
-            <torsional>
-              <coefficient>1.0</coefficient>
-              <surface_radius>0.0475</surface_radius>
-              <use_patch_radius>false</use_patch_radius>
-            </torsional>
-          </friction>
-        </surface>
-      </collision>
     </gazebo>
     
     <gazebo reference="caster_link_fl">
@@ -37,21 +24,8 @@
     <gazebo reference="wheel_link_fr">
       <kp>1000000</kp>
       <kd>100</kd>
-      <mu1>100000.0</mu1>
-      <mu2>100000.0</mu2>
       <maxContacts>1</maxContacts>
       <minDepth>0.003</minDepth>
-      <collision name="wheel_link_fr_collision">
-        <surface>
-          <friction>
-            <torsional>
-              <coefficient>1.0</coefficient>
-              <surface_radius>0.0475</surface_radius>
-              <use_patch_radius>false</use_patch_radius>
-            </torsional>
-          </friction>
-        </surface>
-      </collision>
     </gazebo>
     
     <gazebo reference="caster_link_fr">   
@@ -61,21 +35,8 @@
     <gazebo reference="wheel_link_bl">
       <kp>1000000</kp>
       <kd>100</kd>
-      <mu1>100000.0</mu1>
-      <mu2>100000.0</mu2>
       <maxContacts>1</maxContacts>
       <minDepth>0.003</minDepth>
-      <collision name="wheel_link_bl_collision">
-        <surface>
-          <friction>
-            <torsional>
-              <coefficient>1.0</coefficient>
-              <surface_radius>0.0475</surface_radius>
-              <use_patch_radius>false</use_patch_radius>
-            </torsional>
-          </friction>
-        </surface>
-      </collision>
     </gazebo>
     
     <gazebo reference="caster_link_bl">
@@ -85,21 +46,8 @@
     <gazebo reference="wheel_link_br">
       <kp>1000000</kp>
       <kd>100</kd>
-      <mu1>100000.0</mu1>
-      <mu2>100000.0</mu2>
       <maxContacts>1</maxContacts>
       <minDepth>0.003</minDepth>
-      <collision name="wheel_link_br_collision">
-        <surface>
-          <friction>
-            <torsional>
-              <coefficient>1.0</coefficient>
-              <surface_radius>0.0475</surface_radius>
-              <use_patch_radius>false</use_patch_radius>
-            </torsional>
-          </friction>
-        </surface>
-      </collision>
     </gazebo>
     
     <gazebo reference="caster_link_br">
