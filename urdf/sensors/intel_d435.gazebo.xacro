@@ -10,7 +10,7 @@
 
       <sensor type="depth" name="${name}_depth_frame_sensor">
         <always_on>true</always_on>
-        <update_rate>20.0</update_rate>
+        <update_rate>30.0</update_rate>
         <camera>
           <horizontal_fov>${87.0*M_PI/180.0}</horizontal_fov>
           <image>
@@ -26,7 +26,7 @@
         <plugin name="${name}_depth_frame_controller" filename="libgazebo_ros_openni_kinect.so">
           <baseline>0.2</baseline>
           <alwaysOn>true</alwaysOn>
-          <updateRate>20.0</updateRate>
+          <updateRate>30.0</updateRate>
           <cameraName>${name}_depth</cameraName>
           <imageTopicName>/${name}/ir/image_raw</imageTopicName>
           <cameraInfoTopicName>/${name}/ir/camera_info</cameraInfoTopicName>
@@ -50,7 +50,7 @@
 
       <sensor type="depth" name="${name}_rgb_frame_sensor">
         <always_on>true</always_on>
-        <update_rate>20.0</update_rate>
+        <update_rate>30.0</update_rate>
         <camera>
           <horizontal_fov>${87.0*M_PI/180.0}</horizontal_fov>
           <image>
@@ -66,7 +66,7 @@
         <plugin name="${name}_rgb_frame_controller" filename="libgazebo_ros_openni_kinect.so">
           <baseline>0.2</baseline>
           <alwaysOn>true</alwaysOn>
-          <updateRate>20.0</updateRate>
+          <updateRate>30.0</updateRate>
           <cameraName>${name}_rgb</cameraName>
           <imageTopicName>/${name}/rgb/image_raw</imageTopicName>
           <cameraInfoTopicName>/${name}/rgb/camera_info</cameraInfoTopicName>

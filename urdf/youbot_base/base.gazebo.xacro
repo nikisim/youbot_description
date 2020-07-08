@@ -5,7 +5,7 @@
        xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 
-  <xacro:macro name="youbot_base_gazebo">
+  <xacro:macro name="youbot_base_gazebo" params="namespace">
     <gazebo reference="youbot_base">
     </gazebo>
 
@@ -13,44 +13,33 @@
     <gazebo reference="wheel_link_fl">
       <kp>1000000</kp>
       <kd>100</kd>
-      <maxContacts>1</maxContacts>
-      <minDepth>0.003</minDepth>
-    </gazebo>
-    
-    <gazebo reference="caster_link_fl">
     </gazebo>
 
     <!-- front right wheel -->
     <gazebo reference="wheel_link_fr">
       <kp>1000000</kp>
       <kd>100</kd>
-      <maxContacts>1</maxContacts>
-      <minDepth>0.003</minDepth>
     </gazebo>
-    
-    <gazebo reference="caster_link_fr">   
-    </gazebo>
-
     <!-- back left wheel -->
     <gazebo reference="wheel_link_bl">
       <kp>1000000</kp>
       <kd>100</kd>
-      <maxContacts>1</maxContacts>
-      <minDepth>0.003</minDepth>
     </gazebo>
-    
-    <gazebo reference="caster_link_bl">
-    </gazebo>
-
     <!-- back right wheel -->
     <gazebo reference="wheel_link_br">
       <kp>1000000</kp>
       <kd>100</kd>
-      <maxContacts>1</maxContacts>
-      <minDepth>0.003</minDepth>
     </gazebo>
-    
-    <gazebo reference="caster_link_br">
+
+    <gazebo>
+      <plugin name="base_controller" filename="libbase_controller.so">
+        <commandTopic>/cmd_vel</commandTopic>
+        <odometryTopic>odom</odometryTopic>
+        <odometryFrame>odom</odometryFrame>
+        <odometryRate>30.0</odometryRate>
+        <robotBaseFrame>base_footprint</robotBaseFrame>
+      </plugin>
+
     </gazebo>
 
   </xacro:macro>
