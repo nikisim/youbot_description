@@ -5,7 +5,7 @@
        xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 
-  <xacro:macro name="youbot_base_gazebo" params="namespace">
+  <xacro:macro name="youbot_base_gazebo">
     <gazebo reference="youbot_base">
     </gazebo>
 
