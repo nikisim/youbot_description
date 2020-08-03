@@ -38,6 +38,34 @@
 			</collision>
 		</link>
 
+		<joint name="${name}_cup_joint" type="fixed" >
+			<parent link="${name}_link" />
+			<child link="${name}_cup_link" />
+		</joint>
+
+		<link name="${name}_cup_link">
+			<inertial>
+				<origin xyz="-0.08 0.1 0.025" rpy="${M_PI/2} 0 0"/>
+				<mass value="2.397"/>
+				<inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01" />
+			</inertial>
+
+			<visual>
+				<origin xyz="-0.08 0.1 0.025" rpy="${M_PI/2} 0 0" />
+				<geometry>
+					<mesh filename="package://youbot_description/meshes/bottleholder.stl" scale="0.001 0.001 0.001"/>
+				</geometry>
+				<material name="DarkGrey"/>
+			</visual>
+
+			<collision>
+				<origin xyz="-0.08 0.1 0.025" rpy="${M_PI/2} 0 0" />
+				<geometry>
+					<mesh filename="package://youbot_description/meshes/bottleholder.stl" scale="0.001 0.001 0.001"/>
+				</geometry>
+			</collision>
+		</link>
+
 		<!-- extensions -->
 		
 	
