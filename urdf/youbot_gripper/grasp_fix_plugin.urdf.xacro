@@ -19,12 +19,12 @@
                     <gripper_link>gripper_finger_link_r</gripper_link>
                 </arm>
                 <forces_angle_tolerance>100</forces_angle_tolerance>
-                <update_rate>4</update_rate>
-                <grip_count_threshold>6</grip_count_threshold>
+                <update_rate>25</update_rate>
+                <grip_count_threshold>2</grip_count_threshold>
                 <max_grip_count>12</max_grip_count>
-                <release_tolerance>0.0028</release_tolerance>
+                <release_tolerance>0.0018</release_tolerance>
                 <disable_collisions_on_attach>false</disable_collisions_on_attach>
-                <contact_topic>__default_topic__</contact_topic>
+                <contact_topic>contact_topic</contact_topic>
             </plugin>
         </gazebo>
     </xacro:macro>
